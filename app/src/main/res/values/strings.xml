@@ -40,4 +40,6 @@
     <string name="photos_detail"><b>Photos</b></string>
     <string name="book_now">Book Now</string>
     <string name="background_image">Background Image</string>
+    <string name="go_back">Go Back</string>
+    <string name="add_favorite">Add Favorite</string>
 </resources>
