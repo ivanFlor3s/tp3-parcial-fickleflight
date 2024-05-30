@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.FickleFlight" parent="Base.Theme.FickleFlight" />
+    <style name="RoundFAB" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="android:radius">36dp</item>
+    </style>
 </resources>
