@@ -175,14 +175,14 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:layout_weight="0"
-                    android:src="@drawable/baseline_favorite_24" />
+                    android:src="@drawable/baseline_favorite_border_24" />
 
             </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/get_20_discount"
+                android:text="@string/get_25_discount"
                 android:textSize="18dp" />
 
             <LinearLayout
@@ -195,7 +195,7 @@
                     android:id="@+id/imageView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/mastercard"
+                    android:src="@drawable/visacard"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -212,14 +212,14 @@
                     <TextView
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1.5"
-                        android:text="Use your mastercard with any transaction and get 20% discount instantly!"
+                        android:layout_weight="1.8"
+                        android:text="Use your VISA credit or debit card with any transaction and get 25% discount instantly! "
                         android:textColor="#7E8A96" />
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="0dp"
-                        android:layout_weight="0.5" />
+                        android:layout_weight="0.2" />
 
                     <ImageView
                         android:id="@+id/offer1_arrow2"
