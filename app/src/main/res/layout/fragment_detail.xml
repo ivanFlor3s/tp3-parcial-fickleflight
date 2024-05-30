@@ -13,48 +13,53 @@
         android:layout_marginTop="-60dp"
         android:adjustViewBounds="true"
         android:src="@drawable/isle_background"
+        app:layout_constraintStart_toStartOf="@+id/card"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        android:contentDescription="@string/background_image"
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="88dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="20dp"
         android:padding="10dp"
-       >
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
+
             <LinearLayout
                 android:id="@+id/header_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
+                android:gravity="center_vertical"
 
-                android:gravity="center_vertical">
+                android:weightSum="2">
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical">
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="10dp"
                             android:text="@string/borocay"
-                            android:textSize="24sp"
-                            android:layout_marginEnd="10dp">
-                        </TextView>
+                            android:textSize="24sp"/>
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/flight_code_chip"
@@ -68,28 +73,28 @@
                             app:chipStrokeWidth="1dp" />
 
                     </LinearLayout>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/philippines"
-                        android:textSize="16sp"
-                        android:textColor="#85929D">
-                    </TextView>
+                        android:textColor="#85929D"
+                        android:textSize="16sp"/>
                 </LinearLayout>
 
                 <View
                     android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="0dp">
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
 
                 </View>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/mock_flight_price"
-                    android:textSize="28sp"
-                    >
+                    android:textSize="28sp">
 
                 </TextView>
             </LinearLayout>
@@ -99,57 +104,68 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/overview"
-                android:textSize="16sp">
-            </TextView>
+                android:textSize="16sp"/>
+
             <TextView
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/overview_detail"
+                android:layout_marginTop="10dp"
                 android:lineHeight="24dp"
-                android:textSize="14sp">
-            </TextView>
+                android:text="@string/overview_detail"
+                android:textSize="14sp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/photos_detail"
-                android:textSize="16sp">
-            </TextView>
+                android:textSize="16sp"/>
 
             <HorizontalScrollView
-                android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
+
                     <ImageView
                         android:id="@+id/photo1_detail"
                         android:layout_width="120dp"
                         android:layout_height="90dp"
                         android:layout_marginEnd="15dp"
-                        tools:src="@drawable/photo1_detail"
-                        android:contentDescription="@string/photos_detail" />
+                        android:contentDescription="@string/photos_detail"
+                        tools:src="@drawable/photo1_detail" />
+
                     <ImageView
                         android:id="@+id/photo2_detail"
                         android:layout_width="120dp"
                         android:layout_height="90dp"
                         android:layout_marginEnd="15dp"
-                        tools:src="@drawable/photo2_detail"
-                        android:contentDescription="@string/photos_detail" />
+                        android:contentDescription="@string/photos_detail"
+                        tools:src="@drawable/photo2_detail" />
+
                     <ImageView
                         android:id="@+id/photo3_detail"
                         android:layout_width="120dp"
                         android:layout_height="90dp"
-                        tools:src="@drawable/photo3_detail"
-                        android:contentDescription="@string/photos_detail" />
+                        android:contentDescription="@string/photos_detail"
+                        tools:src="@drawable/photo3_detail" />
                 </LinearLayout>
             </HorizontalScrollView>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="#F8990E"
+                android:text="@string/book_now"
+                android:textSize="14sp"
+                app:cornerRadius="8dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
