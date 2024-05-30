@@ -31,4 +31,18 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="mock_flight_code">5D4N</string>
+    <string name="mock_flight_price"><b>$349</b></string>
+    <string name="philippines">Philippines</string>
+    <string name="borocay"><b>Borocay</b></string>
+    <string name="overview"><b>Overview</b></string>
+    <string name="overview_detail">Spend 5 days and 4 nights in one of the best islands in the world! Bask in the sun while walking in the white sand beach and enjoy the night partying at the popular seaside bars.</string>
+    <string name="photos_detail"><b>Photos</b></string>
+    <string name="book_now">Book Now</string>
+    <string name="background_image">Background Image</string>
+    <string name="go_back">Go Back</string>
+    <string name="add_favorite">Add Favorite</string>
+    <string name="limited_offer">LIMITED OFFER!</string>
+    <string name="get_20_discount"><b>Get 20% discount</b> with your Master credit cards</string>
+    <string name="get_25_discount"><b>Get 25% discount</b> with your VISA credit or debit cards</string>
 </resources>
