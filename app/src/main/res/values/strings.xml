@@ -31,4 +31,8 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="mock_flight_code">5D4N</string>
+    <string name="mock_flight_price"><b>$349</b></string>
+    <string name="philippines">Philippines</string>
+    <string name="borocay">Borocay</string>
 </resources>
