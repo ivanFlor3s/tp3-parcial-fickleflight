@@ -6,6 +6,35 @@
     android:layout_height="match_parent"
     tools:context=".ui.detail.DetailFragment">
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fav_floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shapeAppearance="@style/RoundFAB"
+        app:srcCompat="@drawable/baseline_deatail_favorite_border_24"
+        app:backgroundTint="#E7E7E7"
+        android:contentDescription="@string/add_favorite" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/back_floating_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearance="@style/RoundFAB"
+        app:srcCompat="@drawable/outline_keyboard_backspace_24"
+        app:backgroundTint="#E7E7E7"
+        android:contentDescription="@string/go_back" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
