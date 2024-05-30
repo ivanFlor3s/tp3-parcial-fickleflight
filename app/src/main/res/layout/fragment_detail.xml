@@ -43,9 +43,7 @@
         android:adjustViewBounds="true"
         android:src="@drawable/isle_background"
         app:layout_constraintStart_toStartOf="@+id/card"
-        app:layout_constraintTop_toTopOf="parent"
-        android:contentDescription="@string/background_image"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card"
@@ -88,7 +86,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginEnd="10dp"
                             android:text="@string/borocay"
-                            android:textSize="24sp"/>
+                            android:textSize="24sp" />
 
                         <com.google.android.material.chip.Chip
                             android:id="@+id/flight_code_chip"
@@ -108,7 +106,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/philippines"
                         android:textColor="#85929D"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp" />
                 </LinearLayout>
 
                 <View
@@ -133,7 +131,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/overview"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -141,14 +139,14 @@
                 android:layout_marginTop="10dp"
                 android:lineHeight="24dp"
                 android:text="@string/overview_detail"
-                android:textSize="14sp"/>
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="@string/photos_detail"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <HorizontalScrollView
                 android:layout_width="match_parent"
@@ -194,7 +192,7 @@
                 android:backgroundTint="#F8990E"
                 android:text="@string/book_now"
                 android:textSize="14sp"
-                app:cornerRadius="8dp"/>
+                app:cornerRadius="8dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
