@@ -31,4 +31,6 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="limited_offer">LIMITED OFFER!</string>
+    <string name="get_20_discount"><b>Get 20% discount</b> with your Master credit cards</string>
 </resources>
