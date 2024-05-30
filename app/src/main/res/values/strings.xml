@@ -34,5 +34,8 @@
     <string name="mock_flight_code">5D4N</string>
     <string name="mock_flight_price"><b>$349</b></string>
     <string name="philippines">Philippines</string>
-    <string name="borocay">Borocay</string>
+    <string name="borocay"><b>Borocay</b></string>
+    <string name="overview"><b>Overview</b></string>
+    <string name="overview_detail">Spend 5 days and 4 nights in one of the best islands in the world! Bask in the sun while walking in the white sand beach and enjoy the night partying at the popular seaside bars.</string>
+    <string name="photos_detail"><b>Photos</b></string>
 </resources>

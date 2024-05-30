@@ -29,64 +29,100 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="2"
-            android:padding="8dp"
-            android:gravity="center_vertical">
+            android:padding="16dp"
+            android:orientation="vertical">
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/header_title"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:weightSum="2"
+
+                android:gravity="center_vertical">
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/borocay"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="10dp">
+                        </TextView>
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/flight_code_chip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mock_flight_code"
+                            android:textColor="#4D5760"
+                            app:chipBackgroundColor="#F3F4F5"
+                            app:chipCornerRadius="8dp"
+                            app:chipStrokeColor="#F3F4F5"
+                            app:chipStrokeWidth="1dp" />
+
+                    </LinearLayout>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/borocay"
-                        android:textSize="24sp"
-                        android:layout_marginEnd="10dp">
+                        android:text="@string/philippines"
+                        android:textSize="16sp"
+                        android:textColor="#85929D">
                     </TextView>
-
-                    <com.google.android.material.chip.Chip
-                        android:id="@+id/flight_code_chip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/mock_flight_code"
-                        android:textColor="#4D5760"
-                        app:chipBackgroundColor="#F3F4F5"
-                        app:chipCornerRadius="8dp"
-                        app:chipStrokeColor="#F3F4F5"
-                        app:chipStrokeWidth="1dp" />
-
                 </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+
+                </View>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/philippines"
-                    android:textSize="16sp"
-                    android:textColor="#85929D">
+                    android:layout_weight="1"
+                    android:text="@string/mock_flight_price"
+                    android:textSize="28sp"
+                    >
+
                 </TextView>
             </LinearLayout>
 
-            <View
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="0dp">
-
-            </View>
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/mock_flight_price"
-                android:textSize="28sp"
-                >
-
+                android:layout_marginTop="20dp"
+                android:text="@string/overview"
+                android:textSize="16sp">
             </TextView>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/overview_detail"
+                android:lineHeight="24dp"
+                android:textSize="14sp">
+            </TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/photos_detail"
+                android:textSize="16sp">
+            </TextView>
+
         </LinearLayout>
+
+        
+
+
     </androidx.cardview.widget.CardView>
 
 
