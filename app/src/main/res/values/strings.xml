@@ -54,5 +54,5 @@
     <string name="flight_button">Image of the icon</string>
     <string name="from_explore">FROM</string>
     <string name="from_explore2">FROM</string>
-    <string name="like_image">Like image</string>
+    <string name="country_image_explore">Country</string>
 </resources>
