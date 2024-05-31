@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- TODO icons from figma -->
     <item
         android:id="@+id/navigation_explore"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/baseline_luggage_24"
         android:title="@string/title_explore" />
     <item
         android:id="@+id/navigation_search"
-        android:icon="@drawable/ic_book_opened_black_24dp"
+        android:icon="@drawable/baseline_airplanemode_active_24"
         android:title="@string/title_search" />
 
     <item
         android:id="@+id/navigation_offers"
-        android:icon="@drawable/ic_chat_black_24dp"
+        android:icon="@drawable/outline_discount_24"
         android:title="@string/title_offers" />
 
     <item
         android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_person_black_24dp"
+        android:icon="@drawable/outline_profile_24"
         android:title="@string/title_profile" />
 
 </menu>
