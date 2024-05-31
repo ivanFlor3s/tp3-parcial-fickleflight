@@ -34,4 +34,9 @@
         android:name="com.example.fickleflight.ui.settings.SettingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/resulstsFragment"
+        android:name="com.example.fickleflight.ResulstsFragment"
+        android:label="fragment_resulsts"
+        tools:layout="@layout/fragment_resulsts" />
 </navigation>
