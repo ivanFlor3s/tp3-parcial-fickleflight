@@ -5,7 +5,6 @@ data class OtherFlight(
     val carbon_emissions: CarbonEmissions,
     val departure_token: String,
     val flights: List<FlightX>,
-    val layovers: List<LayoverX>,
     val price: Int,
     val total_duration: Int,
     val type: String
