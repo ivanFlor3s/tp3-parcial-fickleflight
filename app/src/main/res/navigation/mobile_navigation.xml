@@ -28,7 +28,11 @@
         android:id="@+id/searchFragment"
         android:name="com.example.fickleflight.ui.search.SearchFragment"
         android:label="fragment_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_resulstsFragment"
+            app:destination="@id/resulstsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.fickleflight.ui.settings.SettingsFragment"
@@ -36,7 +40,7 @@
         tools:layout="@layout/fragment_settings" />
     <fragment
         android:id="@+id/resulstsFragment"
-        android:name="com.example.fickleflight.ResulstsFragment"
+        android:name="com.example.fickleflight.ui.search.results.ResulstsFragment"
         android:label="fragment_resulsts"
         tools:layout="@layout/fragment_resulsts" />
 </navigation>
