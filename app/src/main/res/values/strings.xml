@@ -44,5 +44,20 @@
     <string name="add_favorite">Add Favorite</string>
     <string name="limited_offer">LIMITED OFFER!</string>
     <string name="get_20_discount"><b>Get 20% discount</b> with your Master credit cards</string>
+    <string name="get_20_discount_for_master"><b>20% discount</b> for Mastercard users</string>
     <string name="get_25_discount"><b>Get 25% discount</b> with your VISA credit or debit cards</string>
+    <string name="get_25_discount_for_visa"><b>25% discount</b> with your visa credit cards</string>
+    <string name="one_way">One Way</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="search_form_select_departure">Select Departure</string>
+    <string name="search_form_select_arrival">Select Arrival</string>
+    <string name="departure_date">Select Date</string>
+    <string name="passengers">Passengers</string>
+    <string name="flight_class">Class</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="label_departure_date">Departure Date</string>
+    <string name="mock_1_adult">1 Adult</string>
+    <string name="economy">Economy</string>
+    <string name="limited_time_offer">Limited time offer!</string>
 </resources>
