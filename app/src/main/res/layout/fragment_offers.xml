@@ -48,8 +48,7 @@
                     app:chipBackgroundColor="@color/accent"
                     app:chipCornerRadius="8dp"
                     app:chipStrokeColor="@color/accent"
-                    app:chipStrokeWidth="1dp"
-                    app:textStyle="bold" />
+                    app:chipStrokeWidth="1dp" />
 
                 <View
                     android:layout_width="0dp"
@@ -162,8 +161,7 @@
                     app:chipBackgroundColor="@color/accent"
                     app:chipCornerRadius="8dp"
                     app:chipStrokeColor="@color/accent"
-                    app:chipStrokeWidth="1dp"
-                    app:textStyle="bold" />
+                    app:chipStrokeWidth="1dp"/>
 
                 <View
                     android:layout_width="0dp"
