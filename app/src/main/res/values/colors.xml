@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="chip_gray">#F3F4F5</color>
     <color name="accent">#32D3AC</color>
+    <color name="muted">#989898</color>
 </resources>
