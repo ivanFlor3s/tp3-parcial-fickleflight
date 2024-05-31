@@ -27,7 +27,7 @@ class DestinationAdapter(private val destinations: List<Destination>) :
             binding.imageView.setImageResource(destination.imageResId)
             binding.textViewDestination.text = destination.name
             binding.textViewCountry.text = destination.country
-            binding.textViewDuration.text = destination.duration
+            binding.offer2Title.text = destination.duration
         }
     }
 }
