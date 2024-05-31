@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <!-- Paris Image and Price -->
+        <!-- Imagen de Paris y Precio -->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
             android:layout_width="0dp"
@@ -82,7 +82,7 @@
             app:layout_constraintBottom_toTopOf="@id/textViewPrice"
             app:layout_constraintEnd_toEndOf="@id/textViewPrice" />
 
-        <!-- Flight Image -->
+        <!-- Imagen avion -->
         <ImageView
             android:id="@+id/flightButton"
             android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/flightButton" />
 
-        <!-- Trending Destinations Text -->
+        <!-- Texto Trending Destinations  -->
         <TextView
             android:id="@+id/textViewTrending"
             android:layout_width="wrap_content"
@@ -135,7 +135,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/textViewTrending" />
 
-        <!-- Offers Text -->
+        <!-- Texto Offers -->
 
         <TextView
             android:id="@+id/textViewOffers"
@@ -151,6 +151,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/recyclerViewTrendingDestinations" />
+
+    <!-- HorizontalScrollView Offers -->
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
