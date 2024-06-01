@@ -81,4 +81,8 @@
     <string name="philippines_explore_example">Philippines</string>
     <string name="_5d4n_explore_example">5D4N</string>
     <string name="chip_explore">chip_explore</string>
+    <string name="macy_johnson_nav_header">Macy Johnson</string>
+    <string name="hello_message_nav_header">Hello</string>
+    <string name="profile_photo_nav_header">Profile Photo</string>
+    <string name="app_version_0_0_1_nav_header">App version 0.0.1</string>
 </resources>
