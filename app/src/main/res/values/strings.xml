@@ -62,4 +62,5 @@
     <string name="limited_time_offer">Limited time offer!</string>
     <string name="mastercard_image">Mastercard Image</string>
     <string name="visa_card_image">Visa Card Image</string>
+    <string name="business_class">Business Class</string>
 </resources>
