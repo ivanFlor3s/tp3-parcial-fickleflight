@@ -22,7 +22,7 @@ import kotlin.math.min
 class FlightViewHolder(view : View): RecyclerView.ViewHolder(view) {
     private val binding = ItemFlightBinding.bind(view)
     @SuppressLint("SetTextI18n")
-    fun bind(flight: BestFlight) {
+    fun bind(flight: BestFlight, onItemSelected: () -> Unit) {
         binding.aerolineName.text = flight.flights[0].airline
         binding.flightTime.text = convertMinutesToReadableTime(flight.total_duration)
 
@@ -31,6 +31,8 @@ class FlightViewHolder(view : View): RecyclerView.ViewHolder(view) {
 
         binding.toAcronym.text = flight.flights[0].arrival_airport.id
         binding.toName.text = flight.flights[0].arrival_airport.name
+
+        binding.btnViewDetails.setOnClickListener{onItemSelected()}
 
         Picasso.get().load(flight.airline_logo)
             .into(binding.aerolineFlag)

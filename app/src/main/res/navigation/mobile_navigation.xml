@@ -42,5 +42,11 @@
         android:id="@+id/resulstsFragment"
         android:name="com.example.fickleflight.ui.search.results.ResulstsFragment"
         android:label="fragment_resulsts"
-        tools:layout="@layout/fragment_resulsts" />
+        tools:layout="@layout/fragment_resulsts" >
+        <action
+            android:id="@+id/action_resulstsFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
 </navigation>

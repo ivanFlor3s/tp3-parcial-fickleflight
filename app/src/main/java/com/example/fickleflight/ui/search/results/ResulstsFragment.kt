@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fickleflight.R
 import com.example.fickleflight.adapters.FlightsAdapter
@@ -38,7 +39,8 @@ class ResulstsFragment : Fragment() {
         binding = FragmentResulstsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        adapter = FlightsAdapter()
+        // Pass params on navigate https://youtu.be/ndqIqh6joGA?list=PL8ie04dqq7_M8nfPA9DPiAy7NsoZQpVAf&t=6974
+        adapter = FlightsAdapter(onItemSelected = { navigateToDetailFragment() })
         binding.rvFlights.setHasFixedSize(true)
         binding.rvFlights.layoutManager= LinearLayoutManager(context)
         binding.rvFlights.adapter = adapter
@@ -92,6 +94,9 @@ class ResulstsFragment : Fragment() {
         return retrofit
     }
 
+    private fun navigateToDetailFragment() {
+        findNavController().navigate(R.id.action_resulstsFragment_to_detailFragment)
+    }
 
 
 

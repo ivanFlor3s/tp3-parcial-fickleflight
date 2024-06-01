@@ -7,7 +7,7 @@ import com.example.fickleflight.R
 import com.example.fickleflight.data.model.BestFlight
 import com.example.fickleflight.holders.FlightViewHolder
 
-class FlightsAdapter(var flights: List<BestFlight> = emptyList()) : RecyclerView.Adapter<FlightViewHolder>(){
+class FlightsAdapter(var flights: List<BestFlight> = emptyList(), private val onItemSelected:() -> Unit) : RecyclerView.Adapter<FlightViewHolder>(){
 
     fun updateList(newList: List<BestFlight>){
         this.flights = newList
@@ -24,7 +24,7 @@ class FlightsAdapter(var flights: List<BestFlight> = emptyList()) : RecyclerView
 
     override fun onBindViewHolder(holder: FlightViewHolder, position: Int) {
         val item = flights[position]
-        holder.bind(item)
+        holder.bind(item, onItemSelected)
     }
 
 }
