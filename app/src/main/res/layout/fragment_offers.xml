@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="15dp"
         android:padding="10dp"
         app:cardCornerRadius="10dp"
@@ -48,8 +49,7 @@
                     app:chipBackgroundColor="@color/accent"
                     app:chipCornerRadius="8dp"
                     app:chipStrokeColor="@color/accent"
-                    app:chipStrokeWidth="1dp"
-                    app:textStyle="bold" />
+                    app:chipStrokeWidth="1dp" />
 
                 <View
                     android:layout_width="0dp"
@@ -162,8 +162,7 @@
                     app:chipBackgroundColor="@color/accent"
                     app:chipCornerRadius="8dp"
                     app:chipStrokeColor="@color/accent"
-                    app:chipStrokeWidth="1dp"
-                    app:textStyle="bold" />
+                    app:chipStrokeWidth="1dp"/>
 
                 <View
                     android:layout_width="0dp"
