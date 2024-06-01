@@ -5,8 +5,11 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.fickleflight.R
+import com.example.fickleflight.adapters.FlightsAdapter
 import com.example.fickleflight.data.model.FlightsResponse
 import com.example.fickleflight.data.network.FligthsApiService
 import com.example.fickleflight.databinding.FragmentResulstsBinding
@@ -20,7 +23,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 class ResulstsFragment : Fragment() {
 
     private lateinit var binding: FragmentResulstsBinding
-
+    private lateinit var adapter : FlightsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,14 +38,35 @@ class ResulstsFragment : Fragment() {
         binding = FragmentResulstsBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val retrofit = getRetrofit()
+        adapter = FlightsAdapter()
+        binding.rvFlights.setHasFixedSize(true)
+        binding.rvFlights.layoutManager= LinearLayoutManager(context)
+        binding.rvFlights.adapter = adapter
+        getFlights()
 
-        //search?engine=google_flights&api_key=123&departure_id=EZE&arrival_id=MIA&outbound_date=2024-05-31&return_date=2024-06-10
+        return root
+    }
+
+    private fun getFlights() {
+        binding.progressBar.isVisible = true
+
+        val retrofit = getRetrofit()
         CoroutineScope(Dispatchers.IO).launch {
             val service = retrofit.create(FligthsApiService::class.java)
-            val response: Response<FlightsResponse> = service.getFlights("google_flights", "123", "EZE", "MIA", "2024-05-31", "2024-06-10")
+            val response: Response<FlightsResponse> = service.getFlights(
+                "google_flights",
+                "123",
+                "EZE",
+                "MIA",
+                "2024-05-31",
+                "2024-06-10"
+            )
             if (response.isSuccessful) {
                 Log.i("FlightsResponse :)", response.body().toString())
+                activity?.runOnUiThread {
+                    adapter.updateList(response.body()?.best_flights ?: emptyList())
+                    binding.progressBar.isVisible = false
+                }
                 /*val flights = response.body()
                 flights?.let {
                     withContext(Dispatchers.Main) {
@@ -53,12 +77,10 @@ class ResulstsFragment : Fragment() {
                         binding.tvSearchParameters.text = it.search_parameters.toString()
                     }
                 }*/
-            }else {
+            } else {
                 Log.i("FlightsResponse :(", response.errorBody().toString())
             }
         }
-
-        return root
     }
 
     private fun getRetrofit(): Retrofit {
