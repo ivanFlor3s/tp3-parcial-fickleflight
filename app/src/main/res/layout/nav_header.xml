@@ -8,7 +8,6 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    tools:ignore="MissingConstraints"
     android:background="@color/white">
 
 
@@ -85,9 +84,11 @@
         android:id="@+id/linearLayoutAppVersion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="20dp"
+        android:gravity="bottom"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -98,10 +99,8 @@
             android:id="@+id/app_version"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:fontFamily="@font/roboto_regular"
             android:text="@string/app_version_0_0_1_nav_header"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium.Inverse"
             android:textColor="#7E8B97"
             android:textSize="14sp" />
     </LinearLayout>
