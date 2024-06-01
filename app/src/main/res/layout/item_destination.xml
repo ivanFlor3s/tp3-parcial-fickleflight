@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--- item destination para el recyclerviewer de fragment_explore -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    android:layout_marginEnd="10dp"
+    >
+
+<LinearLayout
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -7,27 +18,56 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="130dp"
+        android:layout_height="89dp"
         android:scaleType="centerCrop"
         android:contentDescription="@string/country_image_explore" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
     <TextView
         android:id="@+id/textViewDestination"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+
+        android:fontFamily="@font/inter_bold"/>
 
     <TextView
         android:id="@+id/textViewCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:fontFamily="@font/inter_thin"
 
-    <TextView
-        android:id="@+id/textViewDuration"
+        />
+    </LinearLayout>
+    <com.google.android.material.chip.Chip
+        android:id="@+id/offer2_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14sp" />
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:textSize="11sp"
+        android:textColor="#4D5760"
+        app:chipBackgroundColor="#F7F8FA"
+        app:chipCornerRadius="8dp"
+        app:chipStrokeColor="#F7F8FA"
+        app:chipStrokeWidth="1dp"
+        android:contentDescription="@string/chip_explore"
+        />
+
+
 </LinearLayout>
+</LinearLayout>
+
+</androidx.cardview.widget.CardView>
