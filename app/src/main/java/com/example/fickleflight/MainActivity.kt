@@ -18,3 +18,32 @@ class MainActivity : AppCompatActivity() {
         }
     }
 }
+
+//import android.os.Bundle
+//import androidx.appcompat.app.AppCompatActivity
+//import androidx.appcompat.app.AppCompatDelegate
+
+//class MainActivity : AppCompatActivity() {
+
+    //private val PREF_NAME = "settings"
+    //private val DARK_MODE = "dark_mode"
+
+    //override fun onCreate(savedInstanceState: Bundle?) {
+        //super.onCreate(savedInstanceState)
+
+        //val sharedPreferences = getSharedPreferences(PREF_NAME, 0)
+        //if (sharedPreferences.getBoolean(DARK_MODE, false)) {
+            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES) //cambia el modo de la app.
+        //} else {
+            //AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        //}
+
+        //setContentView(R.layout.activity_main)
+
+        //if (savedInstanceState == null) {
+            //supportFragmentManager.beginTransaction()
+                //.replace(R.id.fragment_container, SettingsFragment())
+                //.commit()
+        //}
+    //}
+//}
