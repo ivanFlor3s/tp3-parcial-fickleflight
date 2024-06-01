@@ -63,4 +63,6 @@
     <string name="mastercard_image">Mastercard Image</string>
     <string name="visa_card_image">Visa Card Image</string>
     <string name="business_class">Business Class</string>
+    <string name="_35_results_found">35 results found</string>
+    <string name="filter_icon">Filter Icon</string>
 </resources>
