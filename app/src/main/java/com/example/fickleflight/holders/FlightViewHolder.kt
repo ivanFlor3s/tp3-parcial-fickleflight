@@ -1,10 +1,23 @@
 package com.example.fickleflight.holders
 
 import android.annotation.SuppressLint
+import android.graphics.Bitmap
+import android.graphics.BitmapShader
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+import android.graphics.PorterDuff
+import android.graphics.PorterDuffXfermode
+import android.graphics.RectF
+import android.graphics.Shader
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fickleflight.data.model.BestFlight
 import com.example.fickleflight.databinding.ItemFlightBinding
+import com.squareup.picasso.Picasso
+import com.squareup.picasso.Transformation
+import kotlin.math.min
+
 
 class FlightViewHolder(view : View): RecyclerView.ViewHolder(view) {
     private val binding = ItemFlightBinding.bind(view)
@@ -18,6 +31,9 @@ class FlightViewHolder(view : View): RecyclerView.ViewHolder(view) {
 
         binding.toAcronym.text = flight.flights[0].arrival_airport.id
         binding.toName.text = flight.flights[0].arrival_airport.name
+
+        Picasso.get().load(flight.airline_logo)
+            .into(binding.aerolineFlag)
 
         val price = flight.price.toString()
         binding.flightPrice.text = "$ $price"
@@ -36,3 +52,4 @@ class FlightViewHolder(view : View): RecyclerView.ViewHolder(view) {
         }
     }
 }
+
