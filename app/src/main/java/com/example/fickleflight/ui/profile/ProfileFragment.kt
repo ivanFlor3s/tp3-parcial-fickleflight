@@ -6,10 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.navigation.fragment.findNavController
 import com.example.fickleflight.R
+import com.example.fickleflight.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
 
+    private lateinit var binding: FragmentProfileBinding
     companion object {
         fun newInstance() = ProfileFragment()
     }
@@ -28,4 +32,12 @@ class ProfileFragment : Fragment() {
     ): View {
         return inflater.inflate(R.layout.fragment_profile, container, false)
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val settingOption = view.findViewById<LinearLayout>(R.id.settings_button)
+        settingOption.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
+        }
+    }
+
 }

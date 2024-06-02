@@ -94,4 +94,5 @@
     <string name="logout">Logout</string>
     <string name="settings_icon">Settings Icon</string>
     <string name="profile_avatar">Profile Avatar</string>
+    <string name="generales">Generales</string>
 </resources>
