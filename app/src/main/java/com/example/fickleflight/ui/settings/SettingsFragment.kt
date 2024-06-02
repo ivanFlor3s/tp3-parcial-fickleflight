@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import android.widget.Switch
 import androidx.appcompat.app.AppCompatDelegate
 import com.example.fickleflight.R
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class SettingsFragment : Fragment() {
 
@@ -30,7 +31,7 @@ class SettingsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sharedPreferences = requireActivity().getSharedPreferences(PREF_NAME, 0) //obtiene la activdad del fragment.
-        val switchDarkMode = view.findViewById<Switch>(R.id.switchDarkMode) //encuentra la vista del switch.
+        val switchDarkMode = view.findViewById<SwitchMaterial>(R.id.switchDarkMode) //encuentra la vista del switch.
 
 
         val isDarkMode = sharedPreferences.getBoolean(DARK_MODE, false)
