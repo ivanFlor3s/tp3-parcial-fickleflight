@@ -24,26 +24,13 @@ class AppActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityAppBinding
 
-    private val fragmentsNavigation = setOf(
-        R.id.exploreFragment,
-        R.id.detailFragment,
-        R.id.offersFragment,
-        R.id.profileFragment,
-        R.id.searchFragment,
-        R.id.settingsFragment,
-        R.id.resulstsFragment
-    )
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAppBinding.inflate(layoutInflater)
         enableEdgeToEdge()
-
         setContentView(binding.root)
 
         navController = findNavController(R.id.fragment)
-
-        //binding.contentMainInclude.toolbar.setupWithNavController(navController, AppBarConfiguration(fragmentsNavigation))
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)
@@ -54,69 +41,61 @@ class AppActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        configFragmentsOnNavigate()
+    }
 
-        //Configuro Comportamiento segun Fragmento
+    private fun configFragmentsOnNavigate() {
         navController.addOnDestinationChangedListener { _, destination: NavDestination, _ ->
-
-            //Esto es para configurar el Icono Fijo
-            //supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_bar_chart_black_24dp)
-
             when (destination.id) {
                 R.id.exploreFragment
                 -> {
-                    binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
-                    binding.contentMainInclude.toolbarTitle.visibility = View.GONE
-                    binding.contentMainInclude.appIcon.visibility = View.VISIBLE
-                    binding.contentMainInclude.appIcon.setImageResource(R.drawable.logo)
-                    binding.contentMainInclude.leftIcon.setImageResource(R.drawable.baseline_menu_24)
-                    binding.contentMainInclude.rightIcon.setImageResource(R.drawable.profile_notification)
+                    binding.contentMainInclude.toolbar.visibility = View.VISIBLE
+                    showAppIcon()
+                    showBurguerMenu()
+                    showProfileNotification()
                 }
 
                 R.id.searchFragment -> {
-                    binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
-                    binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
-                    binding.contentMainInclude.appIcon.visibility = View.GONE
-                    binding.contentMainInclude.toolbarTitle.text = getNameByDestination(destination)
-                    binding.contentMainInclude.leftIcon.setImageResource(R.drawable.outline_keyboard_backspace_24)
-                    binding.contentMainInclude.rightIcon.setImageResource(R.drawable.outline_more_vert_24)
+                    binding.contentMainInclude.toolbar.visibility = View.VISIBLE
+                    showTitle(getNameByDestination(destination))
+                    showBackButton()
+                    showMoreOptions()
+                    binding.bottomNavigationView.visibility = BottomNavigationView.VISIBLE
                 }
 
                 R.id.offersFragment -> {
-                    binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
-                    binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
-                    binding.contentMainInclude.appIcon.visibility = View.GONE
-                    binding.contentMainInclude.toolbarTitle.text = getNameByDestination(destination)
-                    binding.contentMainInclude.leftIcon.setImageResource(R.drawable.outline_keyboard_backspace_24)
-                    binding.contentMainInclude.rightIcon.visibility = View.GONE
+                    binding.contentMainInclude.toolbar.visibility = View.VISIBLE
+                    binding.contentMainInclude.leftIcon.visibility = View.GONE
+                    showTitle(getNameByDestination(destination))
+                    showBackButton()
                 }
+
                 R.id.profileFragment -> {
                     binding.contentMainInclude.toolbar.visibility = MaterialToolbar.GONE
                 }
+
                 R.id.settingsFragment -> {
                     binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
-                    binding.contentMainInclude.toolbarTitle.visibility = View.GONE
-                    binding.contentMainInclude.appIcon.visibility = View.VISIBLE
-                    binding.contentMainInclude.appIcon.setImageResource(R.drawable.logo)
-                    binding.contentMainInclude.toolbarTitle.text = "FlickleFlight"
-                    binding.contentMainInclude.leftIcon.setImageResource(R.drawable.outline_keyboard_backspace_24)
                     binding.contentMainInclude.rightIcon.visibility = View.GONE
+                    showAppIcon()
+                    showBackButton()
                 }
+
                 R.id.resulstsFragment -> {
-                    binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
-                    binding.contentMainInclude.appIcon.visibility = View.GONE
                     binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
+                    binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
+                    showBackButton()
+                    showMoreOptions()
                     binding.contentMainInclude.toolbarTitle.text = "EZE -> LAX"
-                    binding.contentMainInclude.leftIcon.setImageResource(R.drawable.outline_keyboard_backspace_24)
-                    binding.contentMainInclude.rightIcon.visibility = View.GONE
+                    binding.bottomNavigationView.visibility = BottomNavigationView.GONE
+
                 }
+
                 R.id.detailFragment -> {
                     binding.contentMainInclude.toolbar.visibility = MaterialToolbar.GONE
                 }
             }
         }
-
-
-
     }
 
     private fun getNameByDestination( destination: NavDestination): String {
@@ -131,4 +110,31 @@ class AppActivity : AppCompatActivity() {
             else -> "Unknown"
         }
     }
+    private fun showBurguerMenu() {
+        binding.contentMainInclude.leftIcon.visibility = View.VISIBLE
+        binding.contentMainInclude.leftIcon.setImageResource(R.drawable.baseline_menu_24)
+    }
+    private fun showBackButton() {
+        binding.contentMainInclude.leftIcon.setImageResource(R.drawable.outline_keyboard_backspace_24)
+        binding.contentMainInclude.leftIcon.setOnClickListener(View.OnClickListener {
+            navController.popBackStack()
+        })
+    }
+    private fun showMoreOptions() {
+        binding.contentMainInclude.leftIcon.visibility = View.VISIBLE
+        binding.contentMainInclude.rightIcon.setImageResource(R.drawable.outline_more_vert_24)
+    }
+    private fun showProfileNotification() {
+        binding.contentMainInclude.rightIcon.setImageResource(R.drawable.profile_notification)
+    }
+    private fun showTitle(title: String) {
+        binding.contentMainInclude.toolbarTitle.text = title
+        binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
+        binding.contentMainInclude.appIcon.visibility = View.GONE
+    }
+    private fun showAppIcon() {
+        binding.contentMainInclude.appIcon.visibility = View.VISIBLE
+        binding.contentMainInclude.toolbarTitle.visibility = View.GONE
+    }
+
 }
