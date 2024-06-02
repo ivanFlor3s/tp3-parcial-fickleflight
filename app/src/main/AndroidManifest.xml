@@ -15,7 +15,7 @@
         <activity
             android:name=".AppActivity"
             android:exported="false"
-            android:label="App"/>
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
