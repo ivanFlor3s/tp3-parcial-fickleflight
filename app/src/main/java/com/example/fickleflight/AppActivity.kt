@@ -125,7 +125,7 @@ class AppActivity : AppCompatActivity() {
             R.id.detailFragment -> "Detail"
             R.id.offersFragment -> "Offers"
             R.id.profileFragment -> "Profile"
-            R.id.searchFragment -> "Search"
+            R.id.searchFragment -> "Search Flight"
             R.id.settingsFragment -> "Settings"
             R.id.resulstsFragment -> "Results"
             else -> "Unknown"
