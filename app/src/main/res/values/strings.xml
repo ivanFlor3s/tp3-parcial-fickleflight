@@ -81,4 +81,17 @@
     <string name="philippines_explore_example">Philippines</string>
     <string name="_5d4n_explore_example">5D4N</string>
     <string name="chip_explore">chip_explore</string>
+    <string name="new_referral_code">NEW</string>
+    <string name="referral_code">Referral Code</string>
+    <string name="payment_details">Payment Details</string>
+    <string name="profile_background">Profile Background</string>
+    <string name="macy_johnson">Macy Johnson</string>
+    <string name="baguio_philippines">Baguio, Philippines</string>
+    <string name="profile_desctription">I like the beach, mountains, forest and everything about nature! :)</string>
+    <string name="credit_card_icon">Credit Card Icon</string>
+    <string name="referral_code_icon">Referral Code Icon</string>
+    <string name="logout_icon">Logout Icon</string>
+    <string name="logout">Logout</string>
+    <string name="settings_icon">Settings Icon</string>
+    <string name="profile_avatar">Profile Avatar</string>
 </resources>
