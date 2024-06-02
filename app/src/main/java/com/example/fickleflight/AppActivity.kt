@@ -96,7 +96,7 @@ class AppActivity : AppCompatActivity() {
                     binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
                     showBackButton()
                     showMoreOptions()
-                    binding.contentMainInclude.toolbarTitle.text = "EZE -> LAX"
+                    binding.contentMainInclude.toolbarTitle.text = "EZE - LAX"
                     binding.bottomNavigationView.visibility = BottomNavigationView.GONE
 
                 }
