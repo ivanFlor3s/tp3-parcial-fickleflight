@@ -2,6 +2,7 @@ package com.example.fickleflight
 
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,8 @@ class AppActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityAppBinding
 
+    private val PREF_NAME = "settings"
+    private val DARK_MODE = "dark_mode"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAppBinding.inflate(layoutInflater)
@@ -31,6 +34,13 @@ class AppActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         navController = findNavController(R.id.fragment)
+
+        val sharedPreferences = getSharedPreferences(PREF_NAME, 0)
+         if (sharedPreferences.getBoolean(DARK_MODE, false)) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES) //cambia el modo de la app.
+         } else {
+             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+         }
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)
