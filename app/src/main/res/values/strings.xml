@@ -95,4 +95,10 @@
     <string name="settings_icon">Settings Icon</string>
     <string name="profile_avatar">Profile Avatar</string>
     <string name="generales">Generales</string>
+    <string name="macy_johnson_nav_header">Macy Johnson</string>
+    <string name="hello_message_nav_header">Hello</string>
+    <string name="profile_photo_nav_header">Profile Photo</string>
+    <string name="app_version_0_0_1_nav_header">App version 0.0.1</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
