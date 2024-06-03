@@ -17,7 +17,8 @@
                 android:layout_width="49dp"
                 android:layout_height="49dp"
                 android:contentDescription="@string/profile_photo_nav_header"
-                android:src="@drawable/cropped_image_macy_johnson" />
+                android:src="@drawable/cropped_image_macy_johnson"
+                android:layout_marginEnd="15dp"/>
 
 
         <LinearLayout
