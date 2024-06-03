@@ -131,13 +131,6 @@ class AppActivity : AppCompatActivity() {
                     showBackButton()
                 }
 
-                R.id.settingsFragment -> {
-                    binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
-                    binding.contentMainInclude.rightIcon.visibility = View.GONE
-                    showAppIcon()
-                    showBackButton()
-                }
-
                 R.id.resulstsFragment -> {
                     binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
                     binding.contentMainInclude.toolbarTitle.visibility = View.VISIBLE
