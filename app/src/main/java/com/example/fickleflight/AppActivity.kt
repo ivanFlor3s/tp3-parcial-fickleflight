@@ -1,14 +1,17 @@
 package com.example.fickleflight
 
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.marginTop
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.NavDestination
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -18,12 +21,15 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.fickleflight.databinding.ActivityAppBinding
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 class AppActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
     private lateinit var binding : ActivityAppBinding
+
+    private lateinit var toggle: ActionBarDrawerToggle
 
     private val PREF_NAME = "settings"
     private val DARK_MODE = "dark_mode"
@@ -34,6 +40,27 @@ class AppActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         navController = findNavController(R.id.fragment)
+
+        val drawerLayout : DrawerLayout = findViewById(R.id.main)
+        val navView : NavigationView = findViewById(R.id.navigation_view)
+
+        toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(toggle)
+        toggle.syncState()
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId) {
+                R.id.settingsFragment -> {
+                    navController.navigate(R.id.settingsFragment)
+                }
+                R.id.profileFragment -> {
+                    navController.navigate(R.id.profileFragment)
+                }
+            }
+            true
+        }
 
         val sharedPreferences = getSharedPreferences(PREF_NAME, 0)
          if (sharedPreferences.getBoolean(DARK_MODE, false)) {
@@ -52,6 +79,15 @@ class AppActivity : AppCompatActivity() {
             insets
         }
         configFragmentsOnNavigate()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        if (toggle.onOptionsItemSelected(item)) {
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 
     private fun configFragmentsOnNavigate() {
