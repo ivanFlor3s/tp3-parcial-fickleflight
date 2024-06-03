@@ -161,6 +161,9 @@ class AppActivity : AppCompatActivity() {
     private fun showBurguerMenu() {
         binding.contentMainInclude.leftIcon.visibility = View.VISIBLE
         binding.contentMainInclude.leftIcon.setImageResource(R.drawable.baseline_menu_24)
+        binding.contentMainInclude.leftIcon.setOnClickListener(View.OnClickListener {
+            drawerLayout.open()
+        })
     }
     private fun showBackButton() {
         binding.contentMainInclude.leftIcon.setImageResource(R.drawable.outline_keyboard_backspace_24)
