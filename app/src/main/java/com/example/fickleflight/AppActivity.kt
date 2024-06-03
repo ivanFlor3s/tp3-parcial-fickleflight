@@ -29,6 +29,8 @@ class AppActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityAppBinding
 
+    //navigation drawer
+    private lateinit var drawerLayout: DrawerLayout
     private lateinit var toggle: ActionBarDrawerToggle
 
     private val PREF_NAME = "settings"
@@ -41,7 +43,7 @@ class AppActivity : AppCompatActivity() {
 
         navController = findNavController(R.id.fragment)
 
-        val drawerLayout : DrawerLayout = findViewById(R.id.main)
+        drawerLayout  = findViewById(R.id.main)
         val navView : NavigationView = findViewById(R.id.navigation_view)
 
         toggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
