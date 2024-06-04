@@ -103,6 +103,14 @@ class AppActivity : AppCompatActivity() {
                     showProfileNotification()
                 }
 
+                R.id.settingsFragment
+                -> {
+                    binding.contentMainInclude.toolbar.visibility = View.VISIBLE
+                    showAppIcon()
+                    showBurguerMenu()
+                    showProfileNotification()
+                }
+
                 R.id.searchFragment -> {
                     binding.contentMainInclude.toolbar.visibility = View.VISIBLE
                     showTitle(getNameByDestination(destination))
@@ -113,19 +121,13 @@ class AppActivity : AppCompatActivity() {
 
                 R.id.offersFragment -> {
                     binding.contentMainInclude.toolbar.visibility = View.VISIBLE
-                    binding.contentMainInclude.leftIcon.visibility = View.GONE
                     showTitle(getNameByDestination(destination))
                     showBackButton()
                 }
 
                 R.id.profileFragment -> {
-                    binding.contentMainInclude.toolbar.visibility = MaterialToolbar.GONE
-                }
-
-                R.id.settingsFragment -> {
-                    binding.contentMainInclude.toolbar.visibility = MaterialToolbar.VISIBLE
-                    binding.contentMainInclude.rightIcon.visibility = View.GONE
-                    showAppIcon()
+                    binding.contentMainInclude.toolbar.visibility = View.VISIBLE
+                    showTitle(getNameByDestination(destination))
                     showBackButton()
                 }
 
