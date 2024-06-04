@@ -6,14 +6,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.navigation.fragment.findNavController
 import com.example.fickleflight.R
-import com.example.fickleflight.databinding.FragmentProfileBinding
+
 
 class ProfileFragment : Fragment() {
 
-    private lateinit var binding: FragmentProfileBinding
     companion object {
         fun newInstance() = ProfileFragment()
     }
@@ -38,6 +38,12 @@ class ProfileFragment : Fragment() {
         settingOption.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_settingsFragment)
         }
+
+        view.findViewById<ImageView>(R.id.back_arrow).setOnClickListener {
+
+            findNavController().popBackStack() //popBackStack() vuelve al fragment anterior.
+        }
     }
+
 
 }
