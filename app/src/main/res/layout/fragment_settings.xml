@@ -16,7 +16,7 @@
             android:id="@+id/tvGeneral"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/generales"
+            android:text="@string/general_setting"
             android:textSize="14sp"
             android:textColor="#1B72BF"
             android:textAppearance="?attr/textAppearanceBody1"
@@ -32,7 +32,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Modo Oscuro"
+                android:text="@string/dark_mode"
                 android:fontFamily="@font/inter_light"
                 android:textAppearance="?attr/textAppearanceBody1"/>
 
