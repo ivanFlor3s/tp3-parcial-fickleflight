@@ -13,3 +13,5 @@ Se requiere desarrollar una aplicación móvil para el Sistema Operativo Android
 | ivanFlor3s           | Ivan Flores        |   
 | sebmartinezpedemonte | Sebastian Martinez | 
 | valentinArce         | Valentin Arce      |  
+
+Se uso la version de Android Studio Iguana y en libs.version.toml se uso agp = "8.3.1", tener esto en cuenta en caso de correrlo con otra version de Android Studio.
