@@ -128,7 +128,6 @@ class AppActivity : AppCompatActivity() {
                 R.id.profileFragment -> {
                     binding.contentMainInclude.toolbar.visibility = View.VISIBLE
                     showTitle(getNameByDestination(destination))
-                    showBackButton()
                 }
 
                 R.id.resulstsFragment -> {
