@@ -1,26 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- TODO icons from figma -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view"
+    >
     <item
-        android:id="@+id/navigation_profile"
-        android:icon="@drawable/ic_person_black_24dp"
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/outline_profile_24"
         android:title="@string/title_profile" />
 
     <item
         android:id="@+id/navigation_notification"
-        android:icon="@drawable/ic_setting_black_24dp"
+        android:icon="@drawable/outline_notifications_24"
         android:title="@string/title_notification" />
     <item
         android:id="@+id/navigation_get_help"
-        android:icon="@drawable/ic_setting_black_24dp"
+        android:icon="@drawable/outline_get_help_24"
         android:title="@string/title_get_help" />
     <item
         android:id="@+id/navigation_calendar"
-        android:icon="@drawable/ic_setting_black_24dp"
+        android:icon="@drawable/baseline_calendar_today_24"
         android:title="@string/title_calendar" />
     <item
-        android:id="@+id/navigation_preference"
-        android:icon="@drawable/ic_setting_black_24dp"
+        android:id="@id/settingsFragment"
+        android:icon="@drawable/outline_settings_24"
         android:title="@string/title_setting" />
 
 </menu>
+
